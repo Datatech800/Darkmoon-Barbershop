@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gift Card · Darkmoon Barbería</title>
+    <link rel="stylesheet" href="css/output.css" />
+  </head>
+  <body class="min-h-screen bg-black font-body text-white antialiased">
+    <header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-black/90 backdrop-blur" id="navbar">
+      <nav class="mx-auto flex h-16 max-w-6xl items-center px-4 sm:px-6">
+        <a href="index.html" class="mr-10 hidden shrink-0 items-center gap-3 md:flex">
+          <img src="img/dm.png" alt="DM" class="h-10 w-auto" />
+          <span class="font-bebas text-2xl tracking-widest text-white">BARBERSHOP</span>
+        </a>
+
+        <div class="relative flex h-16 flex-1 items-center justify-center md:hidden">
+          <a
+            href="index.html#reservar"
+            class="brutal-btn border-2 border-copper bg-black px-5 py-2 font-bebas text-lg tracking-widest text-white uppercase transition-colors hover:border-gold hover:bg-gold"
+          >
+            Reservar ahora
+          </a>
+        </div>
+
+        <div class="hidden flex-1 items-center justify-center gap-8 md:flex">
+          <a
+            href="index.html#barberia"
+            class="font-bebas text-lg tracking-widest text-white/70 uppercase transition-colors hover:text-gold"
+          >
+            Barbería
+          </a>
+          <a
+            href="index.html#servicios"
+            class="font-bebas text-lg tracking-widest text-white/70 uppercase transition-colors hover:text-gold"
+          >
+            Servicios
+          </a>
+          <a
+            href="index.html#colecciones"
+            class="font-bebas text-lg tracking-widest text-white/70 uppercase transition-colors hover:text-gold"
+          >
+            Colecciones
+          </a>
+          <a
+            href="index.html#barberos"
+            class="font-bebas text-lg tracking-widest text-white/70 uppercase transition-colors hover:text-gold"
+          >
+            Barberos
+          </a>
+          <a
+            href="giftcard.html"
+            class="font-bebas text-lg tracking-widest text-white/70 uppercase transition-colors hover:text-gold"
+          >
+            Gift Card
+          </a>
+          <a
+            href="index.html#contacto"
+            class="font-bebas text-lg tracking-widest text-white/70 uppercase transition-colors hover:text-gold"
+          >
+            Contacto
+          </a>
+          <a
+            href="index.html#reservar"
+            class="brutal-btn border-2 border-copper bg-black px-5 py-2 font-bebas text-lg tracking-widest text-white uppercase transition-colors hover:border-gold hover:bg-gold"
+          >
+            Reservar ahora
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <button
+      id="menu-btn"
+      aria-label="Abrir menú"
+      class="fixed top-2.5 right-4 z-[90] hidden h-11 w-11 flex-col items-center justify-center gap-[5px] border-2 border-copper bg-black text-gold shadow-[4px_4px_0_rgba(122,72,33,0.6)] transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:border-gold hover:shadow-[8px_8px_0_rgba(212,175,55,0.7)] max-md:flex"
+    >
+      <span class="bar block h-0.5 w-5 bg-current transition-transform duration-300"></span>
+      <span class="bar block h-0.5 w-5 bg-current transition-opacity duration-300"></span>
+      <span class="bar block h-0.5 w-5 bg-current transition-transform duration-300"></span>
+    </button>
+
+    <div id="full-menu" class="fixed inset-0 z-[80] flex-col bg-black/95 backdrop-blur md:hidden">
+      <div class="flex flex-1 flex-col items-center justify-center gap-8 px-6">
+        <p class="font-bebas text-5xl tracking-[0.3em] text-gold uppercase">Menú</p>
+
+        <a
+          href="index.html"
+          class="menu-link font-bebas text-4xl tracking-widest text-white/90 uppercase transition-colors hover:text-gold"
+        >
+          Inicio
+        </a>
+        <a
+          href="index.html#servicios"
+          class="menu-link font-bebas text-4xl tracking-widest text-white/90 uppercase transition-colors hover:text-gold"
+        >
+          Servicios
+        </a>
+        <a
+          href="index.html#barberos"
+          class="menu-link font-bebas text-4xl tracking-widest text-white/90 uppercase transition-colors hover:text-gold"
+        >
+          Barberos
+        </a>
+        <a
+          href="index.html#colecciones"
+          class="menu-link font-bebas text-4xl tracking-widest text-white/90 uppercase transition-colors hover:text-gold"
+        >
+          Colecciones
+        </a>
+        <a
+          href="giftcard.html"
+          class="menu-link font-bebas text-4xl tracking-widest text-white/90 uppercase transition-colors hover:text-gold"
+        >
+          Gift Card
+        </a>
+        <a
+          href="index.html#contacto"
+          class="menu-link font-bebas text-4xl tracking-widest text-white/90 uppercase transition-colors hover:text-gold"
+        >
+          Contacto
+        </a>
+        <a
+          href="index.html#reservar"
+          class="menu-link brutal-btn mt-4 border-2 border-copper bg-black px-8 py-3 font-bebas text-xl tracking-widest text-white uppercase transition-colors hover:border-gold hover:bg-gold"
+        >
+          Reservar ahora
+        </a>
+      </div>
+    </div>
+
+    <main>
+      <section class="flex min-h-screen w-full items-center bg-gradient-to-r from-[#503113] via-[#1a0f05] to-black">
+        <div class="grid w-full px-8 py-24 sm:px-12 lg:grid-cols-2 lg:px-20">
+          <div class="reveal relative flex items-center justify-center" style="--reveal-delay: 0ms">
+            <div
+              class="pointer-events-none absolute h-[80%] w-[80%] bg-[radial-gradient(circle,rgba(184,115,51,0.4)_0%,transparent_70%)] blur-3xl"
+            ></div>
+            <img
+              src="img/voucher.webp"
+              alt="Gift card Darkmoon"
+              class="relative z-10 w-full max-w-xl rotate-[-2deg] rounded-md border border-gold/30 object-cover shadow-[0_25px_60px_rgba(0,0,0,0.7)]"
+            />
+          </div>
+
+          <div
+            class="reveal flex flex-col items-center justify-center py-12 text-center lg:items-start lg:text-left"
+            style="--reveal-delay: 150ms"
+          >
+            <p class="font-bebas text-lg tracking-[0.3em] text-gold uppercase">Gift Card</p>
+            <h1 class="mt-3 font-display text-5xl font-bold sm:text-6xl">Regalá un momento de estilo</h1>
+            <p class="mt-5 max-w-xl text-xl leading-relaxed text-white/70">
+              La gift card de Darkmoon es el regalo perfecto: quien la reciba puede elegir su servicio favorito y
+              vivirlo a puro estilo en nuestra barbería.
+            </p>
+            <a
+              href="#"
+              class="gift-trigger brutal-btn mt-10 border-2 border-copper bg-black px-8 py-3 font-bebas text-xl tracking-widest text-white uppercase transition-colors hover:border-gold hover:bg-gold"
+            >
+              Regalar experiencia
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="w-full px-4 py-20 sm:px-8 lg:px-16">
+        <div class="text-center">
+          <p class="font-bebas text-lg tracking-[0.3em] text-gold uppercase">Gift Card</p>
+          <h2 class="mt-2 font-display text-4xl font-bold sm:text-5xl">Regalá la experiencia Darkmoon</h2>
+          <p class="mt-3 font-bebas text-2xl tracking-[0.3em] text-white/60 uppercase">
+            seleccioná un servicio para tu giftcard
+          </p>
+          <div class="mt-8 flex justify-center">
+            <a
+              href="#"
+              class="gift-trigger brutal-btn border-2 border-copper bg-black px-8 py-3 font-bebas text-xl tracking-widest text-white uppercase transition-colors hover:border-gold hover:bg-gold"
+            >
+              Regalar experiencia
+            </a>
+          </div>
+        </div>
+
+        <div class="mt-12 grid auto-rows-fr gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <article
+            class="reveal brutal-card gift-trigger flex cursor-pointer flex-col rounded-none bg-gradient-to-br from-[#241308] to-copper p-8"
+            style="--reveal-delay: 0ms"
+          >
+            <h3 class="brutal-title text-center font-bebas text-4xl tracking-wide">Corte de cabello</h3>
+            <p class="mt-3 flex-1 text-center text-base leading-relaxed text-white/60">
+              Incluye lavado de cabello, utilizando productos premium, se puede utilizar navaja o máquina.
+            </p>
+            <div class="mt-6 flex items-center justify-center gap-3 border-t border-white/10 pt-4">
+              <span class="font-bebas text-4xl text-gold">$10.000</span>
+              <span class="text-sm tracking-widest text-white/40 uppercase">30 min</span>
+            </div>
+          </article>
+
+          <article
+            class="reveal brutal-card gift-trigger flex cursor-pointer flex-col rounded-none bg-gradient-to-br from-[#241308] to-copper p-8"
+            style="--reveal-delay: 100ms"
+          >
+            <h3 class="brutal-title text-center font-bebas text-4xl tracking-wide">
+              Corte de cabello y arreglo de barba
+            </h3>
+            <p class="mt-3 flex-1 text-center text-base leading-relaxed text-white/60">
+              Servicio realizado por nuestros barberos profesionales, con atención personalizada y productos premium.
+            </p>
+            <div class="mt-6 flex items-center justify-center gap-3 border-t border-white/10 pt-4">
+              <span class="font-bebas text-4xl text-gold">$15.000</span>
+              <span class="text-sm tracking-widest text-white/40 uppercase">1 hs</span>
+            </div>
+          </article>
+
+          <article
+            class="reveal brutal-card gift-trigger flex cursor-pointer flex-col rounded-none bg-gradient-to-br from-[#241308] to-copper p-8"
+            style="--reveal-delay: 200ms"
+          >
+            <h3 class="brutal-title text-center font-bebas text-4xl tracking-wide">Arreglo de barba</h3>
+            <p class="mt-3 flex-1 text-center text-base leading-relaxed text-white/60">
+              Servicio realizado por nuestros barberos profesionales, con atención personalizada y productos premium.
+            </p>
+            <div class="mt-6 flex items-center justify-center gap-3 border-t border-white/10 pt-4">
+              <span class="font-bebas text-4xl text-gold">$8.000</span>
+              <span class="text-sm tracking-widest text-white/40 uppercase">30 min</span>
+            </div>
+          </article>
+
+          <article
+            class="reveal brutal-card gift-trigger flex cursor-pointer flex-col rounded-none bg-gradient-to-br from-[#241308] to-copper p-8"
+            style="--reveal-delay: 300ms"
+          >
+            <h3 class="brutal-title text-center font-bebas text-4xl tracking-wide">Corte y tintura</h3>
+            <p class="mt-3 flex-1 text-center text-base leading-relaxed text-white/60">
+              Servicio realizado por nuestros barberos profesionales, con atención personalizada y productos premium.
+            </p>
+            <div class="mt-6 flex items-center justify-center gap-3 border-t border-white/10 pt-4">
+              <span class="font-bebas text-4xl text-gold">$30.000</span>
+              <span class="text-sm tracking-widest text-white/40 uppercase">1 h 30 min</span>
+            </div>
+          </article>
+
+          <article
+            class="reveal brutal-card gift-trigger flex cursor-pointer flex-col rounded-none bg-gradient-to-br from-[#241308] to-copper p-8"
+            style="--reveal-delay: 400ms"
+          >
+            <h3 class="brutal-title text-center font-bebas text-4xl tracking-wide">Afeitado tradicional italiano</h3>
+            <p class="mt-3 flex-1 text-center text-base leading-relaxed text-white/60">
+              Servicio realizado por nuestros barberos profesionales, con atención personalizada y productos premium.
+            </p>
+            <div class="mt-6 flex items-center justify-center gap-3 border-t border-white/10 pt-4">
+              <span class="font-bebas text-4xl text-gold">$18.000</span>
+              <span class="text-sm tracking-widest text-white/40 uppercase">40 min</span>
+            </div>
+          </article>
+
+          <article
+            class="reveal brutal-card gift-trigger flex cursor-pointer flex-col rounded-none bg-gradient-to-br from-[#241308] to-copper p-8"
+            style="--reveal-delay: 500ms"
+          >
+            <h3 class="brutal-title text-center font-bebas text-4xl tracking-wide">Rapado</h3>
+            <p class="mt-3 flex-1 text-center text-base leading-relaxed text-white/60">
+              Servicio realizado por nuestros barberos profesionales, con atención personalizada y productos premium.
+            </p>
+            <div class="mt-6 flex items-center justify-center gap-3 border-t border-white/10 pt-4">
+              <span class="font-bebas text-4xl text-gold">$8.000</span>
+              <span class="text-sm tracking-widest text-white/40 uppercase">20 min</span>
+            </div>
+          </article>
+        </div>
+
+        <div id="gift-form" class="mt-14 grid grid-cols-1 lg:grid-cols-2">
+          <img src="img/card_2.webp" alt="Gift card Darkmoon" class="aspect-[16/10] w-full object-cover lg:h-full" />
+
+          <div class="flex items-center justify-center p-6 sm:p-10">
+            <div
+              class="w-full max-w-lg border-4 border-copper bg-gradient-to-br from-[#1a0f05] to-copper p-8 shadow-[10px_10px_0_rgba(122,72,33,0.6)]"
+            >
+              <h3 class="text-center font-bebas text-4xl tracking-wide">Completá los datos</h3>
+              <p class="mt-2 text-center text-white/60">Contanos a quién va dirigida la experiencia</p>
+
+              <form class="mt-8 flex flex-col gap-6">
+                <label class="flex flex-col gap-2">
+                  <span class="font-bebas text-lg tracking-[0.3em] text-gold uppercase">Nombre y apellido</span>
+                  <input
+                    type="text"
+                    name="nombre"
+                    required
+                    placeholder="Juan Pérez"
+                    class="border-2 border-copper bg-black px-4 py-3 text-white placeholder-white/30 transition-colors outline-none focus:border-gold"
+                  />
+                </label>
+
+                <label class="flex flex-col gap-2">
+                  <span class="font-bebas text-lg tracking-[0.3em] text-gold uppercase"
+                    >Email de quien recibe la giftcard</span
+                  >
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    placeholder="destinatario@email.com"
+                    class="border-2 border-copper bg-black px-4 py-3 text-white placeholder-white/30 transition-colors outline-none focus:border-gold"
+                  />
+                </label>
+
+                <label class="flex flex-col gap-2">
+                  <span class="font-bebas text-lg tracking-[0.3em] text-gold uppercase">Dedicatoria</span>
+                  <textarea
+                    name="dedicatoria"
+                    rows="4"
+                    placeholder="Escribí un mensaje para quien recibe la gift card..."
+                    class="resize-none border-2 border-copper bg-black px-4 py-3 text-white placeholder-white/30 transition-colors outline-none focus:border-gold"
+                  ></textarea>
+                </label>
+
+                <button
+                  type="submit"
+                  class="brutal-btn mx-auto mt-2 border-2 border-copper bg-black px-8 py-3 font-bebas text-xl tracking-widest text-white uppercase transition-colors hover:border-gold hover:bg-gold"
+                >
+                  Ir a pagar
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

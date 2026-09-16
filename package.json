@@ -1,0 +1,18 @@
+{
+  "name": "barber",
+  "version": "1.0.0",
+  "description": "Página de barbería construida con Tailwind CSS v4 usando el binario standalone.",
+  "scripts": {
+    "build": "tailwindcss.exe -i ./src/input.css -o ./css/output.css --minify",
+    "format": "prettier --write \"*.html\" \"src/**/*.css\" \"js/**/*.js\" \"*.json\"",
+    "format:check": "prettier --check \"*.html\" \"src/**/*.css\" \"js/**/*.js\""
+  },
+  "devDependencies": {
+    "prettier": "^3.9.7",
+    "prettier-plugin-tailwindcss": "^0.8.1",
+    "ttf2woff2": "^8.0.1"
+  },
+  "allowScripts": {
+    "ttf2woff2@8.0.1": true
+  }
+}

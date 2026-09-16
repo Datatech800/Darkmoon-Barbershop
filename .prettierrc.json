@@ -1,0 +1,8 @@
+{
+  "plugins": ["prettier-plugin-tailwindcss"],
+  "tailwindStylesheet": "./src/input.css",
+  "singleQuote": false,
+  "semi": true,
+  "tabWidth": 2,
+  "printWidth": 120
+}

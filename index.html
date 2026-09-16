@@ -1,0 +1,865 @@
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Darkmoon Barbería</title>
+    <link rel="stylesheet" href="css/output.css" />
+  </head>
+  <body class="min-h-screen bg-black font-body text-white antialiased">
+    <header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-black/90 backdrop-blur" id="navbar">
+      <nav class="mx-auto flex h-16 max-w-6xl items-center px-4 sm:px-6">
+        <a href="#inicio" class="mr-10 hidden shrink-0 items-center gap-3 md:flex">
+          <img src="img/dm.png" alt="DM" class="h-10 w-auto" />
+          <span class="font-bebas text-2xl tracking-widest text-white">BARBERSHOP</span>
+        </a>
+
+        <div class="relative flex h-16 flex-1 items-center justify-center md:hidden">
+          <a
+            href="#reservar"
+            class="brutal-btn border-2 border-copper bg-black px-5 py-2 font-bebas text-lg tracking-widest text-white uppercase transition-colors hover:border-gold hover:bg-gold"
+          >
+            Reservar ahora
+          </a>
+        </div>
+
+        <div class="hidden flex-1 items-center justify-center gap-8 md:flex">
+          <a
+            href="#barberia"
+            class="font-bebas text-lg tracking-widest text-white/70 uppercase transition-colors hover:text-gold"
+          >
+            Barbería
+          </a>
+          <a
+            href="#servicios"
+            class="font-bebas text-lg tracking-widest text-white/70 uppercase transition-colors hover:text-gold"
+          >
+            Servicios
+          </a>
+          <a
+            href="#colecciones"
+            class="font-bebas text-lg tracking-widest text-white/70 uppercase transition-colors hover:text-gold"
+          >
+            Colecciones
+          </a>
+          <a
+            href="#barberos"
+            class="font-bebas text-lg tracking-widest text-white/70 uppercase transition-colors hover:text-gold"
+          >
+            Barberos
+          </a>
+          <a
+            href="giftcard.html"
+            class="font-bebas text-lg tracking-widest text-white/70 uppercase transition-colors hover:text-gold"
+          >
+            Gift Card
+          </a>
+          <a
+            href="#contacto"
+            class="font-bebas text-lg tracking-widest text-white/70 uppercase transition-colors hover:text-gold"
+          >
+            Contacto
+          </a>
+          <a
+            href="#reservar"
+            class="brutal-btn border-2 border-copper bg-black px-5 py-2 font-bebas text-lg tracking-widest text-white uppercase transition-colors hover:border-gold hover:bg-gold"
+          >
+            Reservar ahora
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <button
+      id="menu-btn"
+      aria-label="Abrir menú"
+      class="fixed top-2.5 right-4 z-[90] hidden h-11 w-11 flex-col items-center justify-center gap-[5px] border-2 border-copper bg-black text-gold shadow-[4px_4px_0_rgba(122,72,33,0.6)] transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:border-gold hover:shadow-[8px_8px_0_rgba(212,175,55,0.7)] max-md:flex"
+    >
+      <span class="bar block h-0.5 w-5 bg-current transition-transform duration-300"></span>
+      <span class="bar block h-0.5 w-5 bg-current transition-opacity duration-300"></span>
+      <span class="bar block h-0.5 w-5 bg-current transition-transform duration-300"></span>
+    </button>
+
+    <div id="full-menu" class="fixed inset-0 z-[80] flex-col bg-black/95 backdrop-blur md:hidden">
+      <div class="flex flex-1 flex-col items-center justify-center gap-8 px-6">
+        <p class="font-bebas text-5xl tracking-[0.3em] text-gold uppercase">Menú</p>
+
+        <a
+          href="#barberia"
+          class="menu-link font-bebas text-4xl tracking-widest text-white/90 uppercase transition-colors hover:text-gold"
+        >
+          Barbería
+        </a>
+        <a
+          href="#servicios"
+          class="menu-link font-bebas text-4xl tracking-widest text-white/90 uppercase transition-colors hover:text-gold"
+        >
+          Servicios
+        </a>
+        <a
+          href="#colecciones"
+          class="menu-link font-bebas text-4xl tracking-widest text-white/90 uppercase transition-colors hover:text-gold"
+        >
+          Colecciones
+        </a>
+        <a
+          href="#barberos"
+          class="menu-link font-bebas text-4xl tracking-widest text-white/90 uppercase transition-colors hover:text-gold"
+        >
+          Barberos
+        </a>
+        <a
+          href="giftcard.html"
+          class="menu-link font-bebas text-4xl tracking-widest text-white/90 uppercase transition-colors hover:text-gold"
+        >
+          Gift Card
+        </a>
+        <a
+          href="#contacto"
+          class="menu-link font-bebas text-4xl tracking-widest text-white/90 uppercase transition-colors hover:text-gold"
+        >
+          Contacto
+        </a>
+        <a
+          href="#reservar"
+          class="menu-link brutal-btn mt-4 border-2 border-copper bg-black px-8 py-3 font-bebas text-xl tracking-widest text-white uppercase transition-colors hover:border-gold hover:bg-gold"
+        >
+          Reservar ahora
+        </a>
+      </div>
+    </div>
+
+    <main>
+      <section id="inicio" class="relative flex min-h-screen flex-col items-center px-4 pt-36 text-center">
+        <div aria-hidden="true" class="absolute inset-0">
+          <div
+            class="absolute inset-0 animate-hero-fade bg-cover bg-center"
+            style="background-image: url(&quot;img/barber_hero.webp&quot;)"
+          ></div>
+          <div
+            class="absolute inset-0 animate-hero-fade bg-cover bg-center [animation-delay:15s]"
+            style="background-image: url(&quot;img/barber_hero2.webp&quot;)"
+          ></div>
+          <div
+            class="absolute inset-0 animate-hero-fade bg-cover bg-center [animation-delay:30s]"
+            style="background-image: url(&quot;img/barber_hero3.webp&quot;)"
+          ></div>
+        </div>
+        <div class="absolute inset-0 bg-black/70"></div>
+        <img
+          src="img/darkmoon_logo.png"
+          alt="Darkmoon"
+          class="relative max-h-[14.4rem] w-auto animate-fade-in-up sm:max-h-[19.2rem]"
+        />
+        <div
+          class="relative mt-2 flex animate-fade-in-up items-center justify-center gap-6 [animation-delay:200ms] sm:gap-10"
+        >
+          <img src="img/farol.png" alt="Farol" class="h-32 w-auto sm:h-36" />
+          <div class="flex flex-col items-center">
+            <p class="text-xs font-medium tracking-[0.3em] text-white/60 uppercase sm:text-sm">
+              est. 2026 · mar del plata
+            </p>
+            <p class="mt-3 font-bebas text-3xl tracking-[0.35em] text-white/60">BARBER SHOP</p>
+          </div>
+          <img src="img/farol.png" alt="Farol" class="h-32 w-auto sm:h-36" />
+        </div>
+
+        <h2
+          class="relative mt-14 animate-fade-in-up font-display text-5xl font-bold [animation-delay:400ms] sm:text-7xl"
+        >
+          <span class="block">La barberia </span>
+          <span class="block">del estilo masculino</span>
+        </h2>
+
+        <a
+          href="#reservar"
+          class="brutal-btn relative mt-10 animate-fade-in border-2 border-copper bg-black px-8 py-3 font-bebas text-2xl tracking-widest text-white uppercase transition-colors [animation-delay:600ms] hover:border-gold hover:bg-gold"
+        >
+          Reservar turno
+        </a>
+      </section>
+
+      <section id="barberia" class="grid md:grid-cols-2">
+        <img src="img/nosotros.webp" alt="Nuestra barbería" class="aspect-[16/10] w-full object-cover" />
+
+        <div class="flex flex-col justify-center px-6 py-16 md:px-12 lg:px-20">
+          <p class="font-bebas text-lg tracking-[0.3em] text-gold uppercase">Barbería</p>
+          <h2 class="mt-2 font-display text-4xl font-bold sm:text-5xl">Nosotros</h2>
+          <p class="mt-6 max-w-xl text-lg leading-relaxed text-white/70">
+            En Darkmoon Barbería fusionamos la tradición de la barbería clásica con el estilo moderno. Cada corte,
+            afeitado y arreglo de barba lo ejecutamos con precisión y dedicación, en un ambiente pensado para que te
+            sientas como en casa.
+          </p>
+        </div>
+      </section>
+
+      <section id="servicios" class="w-full px-4 py-20 sm:px-8 lg:px-16">
+        <div class="text-center">
+          <p class="font-bebas text-lg tracking-[0.3em] text-gold uppercase">Servicios</p>
+          <h2 class="mt-2 font-display text-4xl font-bold sm:text-5xl">Servicios y precios</h2>
+        </div>
+
+        <div class="mt-12 grid auto-rows-fr gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <article
+            class="reveal brutal-card flex flex-col rounded-none bg-gradient-to-br from-[#241308] to-copper p-8"
+            style="--reveal-delay: 0ms"
+          >
+            <h3 class="brutal-title text-center font-bebas text-4xl tracking-wide">Corte de cabello</h3>
+            <p class="mt-3 flex-1 text-center text-base leading-relaxed text-white/60">
+              Incluye lavado de cabello, utilizando productos premium, se puede utilizar navaja o máquina.
+            </p>
+            <div class="mt-6 flex items-center justify-center gap-3 border-t border-white/10 pt-4">
+              <span class="font-bebas text-4xl text-gold">$10.000</span>
+              <span class="text-sm tracking-widest text-white/40 uppercase">30 min</span>
+            </div>
+          </article>
+
+          <article
+            class="reveal brutal-card flex flex-col rounded-none bg-gradient-to-br from-[#241308] to-copper p-8"
+            style="--reveal-delay: 100ms"
+          >
+            <h3 class="brutal-title text-center font-bebas text-4xl tracking-wide">
+              Corte de cabello y arreglo de barba
+            </h3>
+            <p class="mt-3 flex-1 text-center text-base leading-relaxed text-white/60">
+              Servicio realizado por nuestros barberos profesionales, con atención personalizada y productos premium.
+            </p>
+            <div class="mt-6 flex items-center justify-center gap-3 border-t border-white/10 pt-4">
+              <span class="font-bebas text-4xl text-gold">$15.000</span>
+              <span class="text-sm tracking-widest text-white/40 uppercase">1 hs</span>
+            </div>
+          </article>
+
+          <article
+            class="reveal brutal-card flex flex-col rounded-none bg-gradient-to-br from-[#241308] to-copper p-8"
+            style="--reveal-delay: 200ms"
+          >
+            <h3 class="brutal-title text-center font-bebas text-4xl tracking-wide">Arreglo de barba</h3>
+            <p class="mt-3 flex-1 text-center text-base leading-relaxed text-white/60">
+              Servicio realizado por nuestros barberos profesionales, con atención personalizada y productos premium.
+            </p>
+            <div class="mt-6 flex items-center justify-center gap-3 border-t border-white/10 pt-4">
+              <span class="font-bebas text-4xl text-gold">$8.000</span>
+              <span class="text-sm tracking-widest text-white/40 uppercase">30 min</span>
+            </div>
+          </article>
+
+          <article
+            class="reveal brutal-card flex flex-col rounded-none bg-gradient-to-br from-[#241308] to-copper p-8"
+            style="--reveal-delay: 300ms"
+          >
+            <h3 class="brutal-title text-center font-bebas text-4xl tracking-wide">Corte y tintura</h3>
+            <p class="mt-3 flex-1 text-center text-base leading-relaxed text-white/60">
+              Servicio realizado por nuestros barberos profesionales, con atención personalizada y productos premium.
+            </p>
+            <div class="mt-6 flex items-center justify-center gap-3 border-t border-white/10 pt-4">
+              <span class="font-bebas text-4xl text-gold">$30.000</span>
+              <span class="text-sm tracking-widest text-white/40 uppercase">1 h 30 min</span>
+            </div>
+          </article>
+
+          <article
+            class="reveal brutal-card flex flex-col rounded-none bg-gradient-to-br from-[#241308] to-copper p-8"
+            style="--reveal-delay: 400ms"
+          >
+            <h3 class="brutal-title text-center font-bebas text-4xl tracking-wide">Afeitado tradicional italiano</h3>
+            <p class="mt-3 flex-1 text-center text-base leading-relaxed text-white/60">
+              Servicio realizado por nuestros barberos profesionales, con atención personalizada y productos premium.
+            </p>
+            <div class="mt-6 flex items-center justify-center gap-3 border-t border-white/10 pt-4">
+              <span class="font-bebas text-4xl text-gold">$18.000</span>
+              <span class="text-sm tracking-widest text-white/40 uppercase">40 min</span>
+            </div>
+          </article>
+
+          <article
+            class="reveal brutal-card flex flex-col rounded-none bg-gradient-to-br from-[#241308] to-copper p-8"
+            style="--reveal-delay: 500ms"
+          >
+            <h3 class="brutal-title text-center font-bebas text-4xl tracking-wide">Rapado</h3>
+            <p class="mt-3 flex-1 text-center text-base leading-relaxed text-white/60">
+              Servicio realizado por nuestros barberos profesionales, con atención personalizada y productos premium.
+            </p>
+            <div class="mt-6 flex items-center justify-center gap-3 border-t border-white/10 pt-4">
+              <span class="font-bebas text-4xl text-gold">$8.000</span>
+              <span class="text-sm tracking-widest text-white/40 uppercase">20 min</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section
+        id="colecciones"
+        class="w-full bg-gradient-to-b from-[#1a0f05] via-[#503113] to-[#1a0f05] px-4 py-20 sm:px-8 lg:px-16"
+      >
+        <div class="text-center">
+          <p class="font-bebas text-lg tracking-[0.3em] text-gold uppercase">Estaciones</p>
+          <h2 class="mt-2 font-display text-4xl font-bold sm:text-5xl">Colecciones</h2>
+          <p class="mt-3 font-bebas text-2xl tracking-[0.3em] text-white/60 uppercase">una estación · un estilo</p>
+        </div>
+
+        <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <figure
+            class="group reveal relative aspect-[3/4] overflow-hidden border border-transparent transition-all hover:border-[#d4af37] hover:shadow-[0_0_45px_rgba(184,115,51,0.85)]"
+            style="--reveal-delay: 0ms"
+          >
+            <img
+              src="img/corte_1.webp"
+              alt="Colección Otoño"
+              class="h-full w-full origin-top object-cover object-[50%_20%] transition-transform duration-500 group-hover:scale-[1.06]"
+            />
+            <figcaption
+              class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-4 pt-10 pb-4"
+            >
+              <p class="text-center font-bebas text-2xl tracking-[0.25em] text-white uppercase">Otoño</p>
+            </figcaption>
+          </figure>
+
+          <figure
+            class="group reveal relative aspect-[3/4] overflow-hidden border border-transparent transition-all hover:border-[#d4af37] hover:shadow-[0_0_45px_rgba(184,115,51,0.85)]"
+            style="--reveal-delay: 100ms"
+          >
+            <img
+              src="img/corte_2.webp"
+              alt="Colección Invierno"
+              class="h-full w-full origin-top object-cover object-[50%_20%] transition-transform duration-500 group-hover:scale-[1.06]"
+            />
+            <figcaption
+              class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-4 pt-10 pb-4"
+            >
+              <p class="text-center font-bebas text-2xl tracking-[0.25em] text-white uppercase">Invierno</p>
+            </figcaption>
+          </figure>
+
+          <figure
+            class="group reveal relative aspect-[3/4] overflow-hidden border border-transparent transition-all hover:border-[#d4af37] hover:shadow-[0_0_45px_rgba(184,115,51,0.85)]"
+            style="--reveal-delay: 200ms"
+          >
+            <img
+              src="img/corte_3.webp"
+              alt="Colección Primavera"
+              class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <figcaption
+              class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-4 pt-10 pb-4"
+            >
+              <p class="text-center font-bebas text-2xl tracking-[0.25em] text-white uppercase">Primavera</p>
+            </figcaption>
+          </figure>
+
+          <figure
+            class="group reveal relative aspect-[3/4] overflow-hidden border border-transparent transition-all hover:border-[#d4af37] hover:shadow-[0_0_45px_rgba(184,115,51,0.85)]"
+            style="--reveal-delay: 300ms"
+          >
+            <img
+              src="img/corte_4.webp"
+              alt="Colección Verano"
+              class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <figcaption
+              class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-4 pt-10 pb-4"
+            >
+              <p class="text-center font-bebas text-2xl tracking-[0.25em] text-white uppercase">Verano</p>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="barberos" class="w-full px-4 py-20 sm:px-8 lg:px-16">
+        <div class="text-center">
+          <p class="font-bebas text-lg tracking-[0.3em] text-gold uppercase">Nuestro equipo</p>
+          <h2 class="mt-2 font-display text-4xl font-bold sm:text-5xl">Barberos</h2>
+          <p class="mt-3 font-bebas text-2xl tracking-[0.3em] text-white/60 uppercase">arte, hoja y navaja</p>
+        </div>
+
+        <div class="mt-12 grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-6">
+          <figure
+            class="group reveal relative aspect-[3/4] overflow-hidden border border-transparent transition-all hover:border-[#d4af37] hover:shadow-[0_0_45px_rgba(184,115,51,0.85)]"
+            style="--reveal-delay: 0ms"
+          >
+            <div class="barber-glow"></div>
+            <div class="relative h-full w-full overflow-hidden">
+              <img
+                src="img/barbero.webp"
+                alt="Mateo Ríos"
+                class="h-full w-full object-cover object-[50%_15%] transition-transform duration-500 group-hover:scale-[1.06]"
+              />
+            </div>
+            <figcaption
+              class="absolute inset-x-0 bottom-0 z-20 bg-gradient-to-t from-black/90 to-transparent px-4 pt-10 pb-4"
+            >
+              <p class="text-center font-bebas text-2xl tracking-[0.2em] text-white uppercase">Mateo Ríos</p>
+              <p class="mt-1 text-center font-bebas text-sm tracking-[0.25em] text-gold uppercase">Master barber</p>
+            </figcaption>
+          </figure>
+
+          <figure
+            class="group reveal relative aspect-[3/4] overflow-hidden border border-transparent transition-all hover:border-[#d4af37] hover:shadow-[0_0_45px_rgba(184,115,51,0.85)]"
+            style="--reveal-delay: 100ms"
+          >
+            <div class="barber-glow"></div>
+            <div class="relative h-full w-full overflow-hidden">
+              <img
+                src="img/barber_2.webp"
+                alt="Juan Cruz"
+                class="h-full w-full object-cover object-[50%_15%] transition-transform duration-500 group-hover:scale-[1.06]"
+              />
+            </div>
+            <figcaption
+              class="absolute inset-x-0 bottom-0 z-20 bg-gradient-to-t from-black/90 to-transparent px-4 pt-10 pb-4"
+            >
+              <p class="text-center font-bebas text-2xl tracking-[0.2em] text-white uppercase">Juan Cruz</p>
+              <p class="mt-1 text-center font-bebas text-sm tracking-[0.25em] text-gold uppercase">Barbero senior</p>
+            </figcaption>
+          </figure>
+
+          <figure
+            class="group reveal relative aspect-[3/4] overflow-hidden border border-transparent transition-all hover:border-[#d4af37] hover:shadow-[0_0_45px_rgba(184,115,51,0.85)]"
+            style="--reveal-delay: 200ms"
+          >
+            <div class="barber-glow"></div>
+            <div class="relative h-full w-full overflow-hidden">
+              <img
+                src="img/barber_3.webp"
+                alt="Lucas Ferreyra"
+                class="h-full w-full object-cover object-[50%_15%] transition-transform duration-500 group-hover:scale-[1.06]"
+              />
+            </div>
+            <figcaption
+              class="absolute inset-x-0 bottom-0 z-20 bg-gradient-to-t from-black/90 to-transparent px-4 pt-10 pb-4"
+            >
+              <p class="text-center font-bebas text-2xl tracking-[0.2em] text-white uppercase">Lucas Ferreyra</p>
+              <p class="mt-1 text-center font-bebas text-sm tracking-[0.25em] text-gold uppercase">Barbero senior</p>
+            </figcaption>
+          </figure>
+
+          <figure
+            class="group reveal relative aspect-[3/4] overflow-hidden border border-transparent transition-all hover:border-[#d4af37] hover:shadow-[0_0_45px_rgba(184,115,51,0.85)]"
+            style="--reveal-delay: 300ms"
+          >
+            <div class="barber-glow"></div>
+            <div class="relative h-full w-full overflow-hidden">
+              <img
+                src="img/barber_4.webp"
+                alt="Ezequiel Luna"
+                class="h-full w-full object-cover object-[50%_15%] transition-transform duration-500 group-hover:scale-[1.06]"
+              />
+            </div>
+            <figcaption
+              class="absolute inset-x-0 bottom-0 z-20 bg-gradient-to-t from-black/90 to-transparent px-4 pt-10 pb-4"
+            >
+              <p class="text-center font-bebas text-2xl tracking-[0.2em] text-white uppercase">Ezequiel Luna</p>
+              <p class="mt-1 text-center font-bebas text-sm tracking-[0.25em] text-gold uppercase">Barbero senior</p>
+            </figcaption>
+          </figure>
+
+          <figure
+            class="group reveal relative aspect-[3/4] overflow-hidden border border-transparent transition-all hover:border-[#d4af37] hover:shadow-[0_0_45px_rgba(184,115,51,0.85)]"
+            style="--reveal-delay: 400ms"
+          >
+            <div class="barber-glow"></div>
+            <div class="relative h-full w-full overflow-hidden">
+              <img
+                src="img/barber_5.webp"
+                alt="Nicolás Vega"
+                class="h-full w-full object-cover object-[50%_15%] transition-transform duration-500 group-hover:scale-[1.06]"
+              />
+            </div>
+            <figcaption
+              class="absolute inset-x-0 bottom-0 z-20 bg-gradient-to-t from-black/90 to-transparent px-4 pt-10 pb-4"
+            >
+              <p class="text-center font-bebas text-2xl tracking-[0.2em] text-white uppercase">Nicolás Vega</p>
+              <p class="mt-1 text-center font-bebas text-sm tracking-[0.25em] text-gold uppercase">Fade especialista</p>
+            </figcaption>
+          </figure>
+
+          <figure
+            class="group reveal relative aspect-[3/4] overflow-hidden border border-transparent transition-all hover:border-[#d4af37] hover:shadow-[0_0_45px_rgba(184,115,51,0.85)]"
+            style="--reveal-delay: 500ms"
+          >
+            <div class="barber-glow"></div>
+            <div class="relative h-full w-full overflow-hidden">
+              <img
+                src="img/barber_6.webp"
+                alt="Santiago Paz"
+                class="h-full w-full object-cover object-[50%_15%] transition-transform duration-500 group-hover:scale-[1.06]"
+              />
+            </div>
+            <figcaption
+              class="absolute inset-x-0 bottom-0 z-20 bg-gradient-to-t from-black/90 to-transparent px-4 pt-10 pb-4"
+            >
+              <p class="text-center font-bebas text-2xl tracking-[0.2em] text-white uppercase">Santiago Paz</p>
+              <p class="mt-1 text-center font-bebas text-sm tracking-[0.25em] text-gold uppercase">Barbero senior</p>
+            </figcaption>
+          </figure>
+
+          <figure
+            class="group reveal relative aspect-[3/4] overflow-hidden border border-transparent transition-all hover:border-[#d4af37] hover:shadow-[0_0_45px_rgba(184,115,51,0.85)]"
+            style="--reveal-delay: 600ms"
+          >
+            <div class="barber-glow"></div>
+            <div class="relative h-full w-full overflow-hidden">
+              <img
+                src="img/barber_7.webp"
+                alt="Gonzalo Roldán"
+                class="h-full w-full object-cover object-[50%_15%] transition-transform duration-500 group-hover:scale-[1.06]"
+              />
+            </div>
+            <figcaption
+              class="absolute inset-x-0 bottom-0 z-20 bg-gradient-to-t from-black/90 to-transparent px-4 pt-10 pb-4"
+            >
+              <p class="text-center font-bebas text-2xl tracking-[0.2em] text-white uppercase">Gonzalo Roldán</p>
+              <p class="mt-1 text-center font-bebas text-sm tracking-[0.25em] text-gold uppercase">
+                Barba especialista
+              </p>
+            </figcaption>
+          </figure>
+
+          <figure
+            class="group reveal relative aspect-[3/4] overflow-hidden border border-transparent transition-all hover:border-[#d4af37] hover:shadow-[0_0_45px_rgba(184,115,51,0.85)]"
+            style="--reveal-delay: 700ms"
+          >
+            <div class="barber-glow"></div>
+            <div class="relative h-full w-full overflow-hidden">
+              <img
+                src="img/barber_8.webp"
+                alt="Bruno Arce"
+                class="h-full w-full object-cover object-[50%_15%] transition-transform duration-500 group-hover:scale-[1.06]"
+              />
+            </div>
+            <figcaption
+              class="absolute inset-x-0 bottom-0 z-20 bg-gradient-to-t from-black/90 to-transparent px-4 pt-10 pb-4"
+            >
+              <p class="text-center font-bebas text-2xl tracking-[0.2em] text-white uppercase">Bruno Arce</p>
+              <p class="mt-1 text-center font-bebas text-sm tracking-[0.25em] text-gold uppercase">Barbero junior</p>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="resenas" class="w-full px-4 py-20 sm:px-8 lg:px-16">
+        <div class="text-center">
+          <p class="font-bebas text-lg tracking-[0.3em] text-gold uppercase">Reseñas</p>
+          <h2 class="mt-2 font-display text-4xl font-bold sm:text-5xl">Los comentarios sobre nosotros</h2>
+          <p class="mt-3 font-bebas text-2xl tracking-[0.3em] text-white/60 uppercase">
+            lo que dicen nuestros clientes
+          </p>
+        </div>
+
+        <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <article
+            class="reveal brutal-card flex flex-col gap-3 border-2 border-copper/50 bg-gradient-to-br from-[#241308] to-[#3d2110] p-4 sm:gap-4 sm:p-6 lg:gap-5 lg:p-8"
+            style="--reveal-delay: 0ms"
+          >
+            <div class="flex items-center gap-3 sm:gap-4">
+              <div
+                class="flex h-10 w-10 items-center justify-center rounded-full border border-gold/40 bg-black font-bebas text-base tracking-wider text-gold sm:h-11 sm:w-11 sm:text-lg lg:h-12 lg:w-12 lg:text-xl"
+              >
+                ML
+              </div>
+              <div>
+                <h3 class="brutal-title font-bebas text-xl tracking-wider text-gold uppercase sm:text-2xl">
+                  Matías L.
+                </h3>
+                <p class="text-sm tracking-widest text-white/50 uppercase">Cliente frecuente</p>
+              </div>
+            </div>
+            <div class="flex gap-1 text-gold" aria-label="5 de 5 estrellas">
+              <svg viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                <path d="M10 1l2.6 5.7 6.2.7-4.7 4.1 1.4 6.1L10 14.7l-5.5 2.9 1.4-6.1L1.2 7.4l6.2-.7L10 1z" />
+              </svg>
+              <svg viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                <path d="M10 1l2.6 5.7 6.2.7-4.7 4.1 1.4 6.1L10 14.7l-5.5 2.9 1.4-6.1L1.2 7.4l6.2-.7L10 1z" />
+              </svg>
+              <svg viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                <path d="M10 1l2.6 5.7 6.2.7-4.7 4.1 1.4 6.1L10 14.7l-5.5 2.9 1.4-6.1L1.2 7.4l6.2-.7L10 1z" />
+              </svg>
+              <svg viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                <path d="M10 1l2.6 5.7 6.2.7-4.7 4.1 1.4 6.1L10 14.7l-5.5 2.9 1.4-6.1L1.2 7.4l6.2-.7L10 1z" />
+              </svg>
+              <svg viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                <path d="M10 1l2.6 5.7 6.2.7-4.7 4.1 1.4 6.1L10 14.7l-5.5 2.9 1.4-6.1L1.2 7.4l6.2-.7L10 1z" />
+              </svg>
+            </div>
+            <p class="flex-1 text-base leading-relaxed text-white/75 italic sm:text-lg">
+              "El mejor corte de mi vida. Atención impecable, ambiente increíble y un resultado que superó todas mis
+              expectativas."
+            </p>
+          </article>
+
+          <article
+            class="reveal brutal-card flex flex-col gap-3 border-2 border-copper/50 bg-gradient-to-br from-[#241308] to-[#3d2110] p-4 sm:gap-4 sm:p-6 lg:gap-5 lg:p-8"
+            style="--reveal-delay: 100ms"
+          >
+            <div class="flex items-center gap-3 sm:gap-4">
+              <div
+                class="flex h-10 w-10 items-center justify-center rounded-full border border-gold/40 bg-black font-bebas text-base tracking-wider text-gold sm:h-11 sm:w-11 sm:text-lg lg:h-12 lg:w-12 lg:text-xl"
+              >
+                JG
+              </div>
+              <div>
+                <h3 class="brutal-title font-bebas text-xl tracking-wider text-gold uppercase sm:text-2xl">Jonás G.</h3>
+                <p class="text-sm tracking-widest text-white/50 uppercase">Cliente ocasional</p>
+              </div>
+            </div>
+            <div class="flex gap-1 text-gold" aria-label="5 de 5 estrellas">
+              <svg viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                <path d="M10 1l2.6 5.7 6.2.7-4.7 4.1 1.4 6.1L10 14.7l-5.5 2.9 1.4-6.1L1.2 7.4l6.2-.7L10 1z" />
+              </svg>
+              <svg viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                <path d="M10 1l2.6 5.7 6.2.7-4.7 4.1 1.4 6.1L10 14.7l-5.5 2.9 1.4-6.1L1.2 7.4l6.2-.7L10 1z" />
+              </svg>
+              <svg viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                <path d="M10 1l2.6 5.7 6.2.7-4.7 4.1 1.4 6.1L10 14.7l-5.5 2.9 1.4-6.1L1.2 7.4l6.2-.7L10 1z" />
+              </svg>
+              <svg viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                <path d="M10 1l2.6 5.7 6.2.7-4.7 4.1 1.4 6.1L10 14.7l-5.5 2.9 1.4-6.1L1.2 7.4l6.2-.7L10 1z" />
+              </svg>
+              <svg viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                <path d="M10 1l2.6 5.7 6.2.7-4.7 4.1 1.4 6.1L10 14.7l-5.5 2.9 1.4-6.1L1.2 7.4l6.2-.7L10 1z" />
+              </svg>
+            </div>
+            <p class="flex-1 text-base leading-relaxed text-white/75 italic sm:text-lg">
+              "Regalé una gift card y le encantó. El lugar es una joya, se nota la pasión por el oficio en cada
+              detalle."
+            </p>
+          </article>
+
+          <article
+            class="reveal brutal-card flex flex-col gap-3 border-2 border-copper/50 bg-gradient-to-br from-[#241308] to-[#3d2110] p-4 sm:gap-4 sm:p-6 lg:gap-5 lg:p-8"
+            style="--reveal-delay: 200ms"
+          >
+            <div class="flex items-center gap-3 sm:gap-4">
+              <div
+                class="flex h-10 w-10 items-center justify-center rounded-full border border-gold/40 bg-black font-bebas text-base tracking-wider text-gold sm:h-11 sm:w-11 sm:text-lg lg:h-12 lg:w-12 lg:text-xl"
+              >
+                RM
+              </div>
+              <div>
+                <h3 class="brutal-title font-bebas text-xl tracking-wider text-gold uppercase sm:text-2xl">Raúl M.</h3>
+                <p class="text-sm tracking-widest text-white/50 uppercase">Barbero en formación</p>
+              </div>
+            </div>
+            <div class="flex gap-1 text-gold" aria-label="5 de 5 estrellas">
+              <svg viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                <path d="M10 1l2.6 5.7 6.2.7-4.7 4.1 1.4 6.1L10 14.7l-5.5 2.9 1.4-6.1L1.2 7.4l6.2-.7L10 1z" />
+              </svg>
+              <svg viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                <path d="M10 1l2.6 5.7 6.2.7-4.7 4.1 1.4 6.1L10 14.7l-5.5 2.9 1.4-6.1L1.2 7.4l6.2-.7L10 1z" />
+              </svg>
+              <svg viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                <path d="M10 1l2.6 5.7 6.2.7-4.7 4.1 1.4 6.1L10 14.7l-5.5 2.9 1.4-6.1L1.2 7.4l6.2-.7L10 1z" />
+              </svg>
+              <svg viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                <path d="M10 1l2.6 5.7 6.2.7-4.7 4.1 1.4 6.1L10 14.7l-5.5 2.9 1.4-6.1L1.2 7.4l6.2-.7L10 1z" />
+              </svg>
+              <svg viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                <path d="M10 1l2.6 5.7 6.2.7-4.7 4.1 1.4 6.1L10 14.7l-5.5 2.9 1.4-6.1L1.2 7.4l6.2-.7L10 1z" />
+              </svg>
+            </div>
+            <p class="flex-1 text-base leading-relaxed text-white/75 italic sm:text-lg">
+              "Vengo de otras barberías y acá no hay comparación. El afeitado tradicional es una experiencia de otro
+              nivel."
+            </p>
+          </article>
+
+          <article
+            class="reveal brutal-card flex flex-col gap-3 border-2 border-copper/50 bg-gradient-to-br from-[#241308] to-[#3d2110] p-4 sm:gap-4 sm:p-6 lg:gap-5 lg:p-8"
+            style="--reveal-delay: 300ms"
+          >
+            <div class="flex items-center gap-3 sm:gap-4">
+              <div
+                class="flex h-10 w-10 items-center justify-center rounded-full border border-gold/40 bg-black font-bebas text-base tracking-wider text-gold sm:h-11 sm:w-11 sm:text-lg lg:h-12 lg:w-12 lg:text-xl"
+              >
+                CN
+              </div>
+              <div>
+                <h3 class="brutal-title font-bebas text-xl tracking-wider text-gold uppercase sm:text-2xl">
+                  Carlos N.
+                </h3>
+                <p class="text-sm tracking-widest text-white/50 uppercase">Cliente frecuente</p>
+              </div>
+            </div>
+            <div class="flex gap-1 text-gold" aria-label="5 de 5 estrellas">
+              <svg viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                <path d="M10 1l2.6 5.7 6.2.7-4.7 4.1 1.4 6.1L10 14.7l-5.5 2.9 1.4-6.1L1.2 7.4l6.2-.7L10 1z" />
+              </svg>
+              <svg viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                <path d="M10 1l2.6 5.7 6.2.7-4.7 4.1 1.4 6.1L10 14.7l-5.5 2.9 1.4-6.1L1.2 7.4l6.2-.7L10 1z" />
+              </svg>
+              <svg viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                <path d="M10 1l2.6 5.7 6.2.7-4.7 4.1 1.4 6.1L10 14.7l-5.5 2.9 1.4-6.1L1.2 7.4l6.2-.7L10 1z" />
+              </svg>
+              <svg viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                <path d="M10 1l2.6 5.7 6.2.7-4.7 4.1 1.4 6.1L10 14.7l-5.5 2.9 1.4-6.1L1.2 7.4l6.2-.7L10 1z" />
+              </svg>
+              <svg viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                <path d="M10 1l2.6 5.7 6.2.7-4.7 4.1 1.4 6.1L10 14.7l-5.5 2.9 1.4-6.1L1.2 7.4l6.2-.7L10 1z" />
+              </svg>
+            </div>
+            <p class="flex-1 text-base leading-relaxed text-white/75 italic sm:text-lg">
+              "El fade quedó perfecto y la atención al detalle es increíble. Además el ambiente es súper cómodo."
+            </p>
+          </article>
+
+          <article
+            class="reveal brutal-card flex flex-col gap-3 border-2 border-copper/50 bg-gradient-to-br from-[#241308] to-[#3d2110] p-4 sm:gap-4 sm:p-6 lg:gap-5 lg:p-8"
+            style="--reveal-delay: 400ms"
+          >
+            <div class="flex items-center gap-3 sm:gap-4">
+              <div
+                class="flex h-10 w-10 items-center justify-center rounded-full border border-gold/40 bg-black font-bebas text-base tracking-wider text-gold sm:h-11 sm:w-11 sm:text-lg lg:h-12 lg:w-12 lg:text-xl"
+              >
+                JT
+              </div>
+              <div>
+                <h3 class="brutal-title font-bebas text-xl tracking-wider text-gold uppercase sm:text-2xl">
+                  Joaquín T.
+                </h3>
+                <p class="text-sm tracking-widest text-white/50 uppercase">Cliente frecuente</p>
+              </div>
+            </div>
+            <div class="flex gap-1 text-gold" aria-label="5 de 5 estrellas">
+              <svg viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                <path d="M10 1l2.6 5.7 6.2.7-4.7 4.1 1.4 6.1L10 14.7l-5.5 2.9 1.4-6.1L1.2 7.4l6.2-.7L10 1z" />
+              </svg>
+              <svg viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                <path d="M10 1l2.6 5.7 6.2.7-4.7 4.1 1.4 6.1L10 14.7l-5.5 2.9 1.4-6.1L1.2 7.4l6.2-.7L10 1z" />
+              </svg>
+              <svg viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                <path d="M10 1l2.6 5.7 6.2.7-4.7 4.1 1.4 6.1L10 14.7l-5.5 2.9 1.4-6.1L1.2 7.4l6.2-.7L10 1z" />
+              </svg>
+              <svg viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                <path d="M10 1l2.6 5.7 6.2.7-4.7 4.1 1.4 6.1L10 14.7l-5.5 2.9 1.4-6.1L1.2 7.4l6.2-.7L10 1z" />
+              </svg>
+              <svg viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                <path d="M10 1l2.6 5.7 6.2.7-4.7 4.1 1.4 6.1L10 14.7l-5.5 2.9 1.4-6.1L1.2 7.4l6.2-.7L10 1z" />
+              </svg>
+            </div>
+            <p class="flex-1 text-base leading-relaxed text-white/75 italic sm:text-lg">
+              "El arreglo de barba es de otro planeta. Salís con la cara hecha un cuadro, siempre vuelvo."
+            </p>
+          </article>
+
+          <article
+            class="reveal brutal-card flex flex-col gap-3 border-2 border-copper/50 bg-gradient-to-br from-[#241308] to-[#3d2110] p-4 sm:gap-4 sm:p-6 lg:gap-5 lg:p-8"
+            style="--reveal-delay: 500ms"
+          >
+            <div class="flex items-center gap-3 sm:gap-4">
+              <div
+                class="flex h-10 w-10 items-center justify-center rounded-full border border-gold/40 bg-black font-bebas text-base tracking-wider text-gold sm:h-11 sm:w-11 sm:text-lg lg:h-12 lg:w-12 lg:text-xl"
+              >
+                VP
+              </div>
+              <div>
+                <h3 class="brutal-title font-bebas text-xl tracking-wider text-gold uppercase sm:text-2xl">
+                  Valentín P.
+                </h3>
+                <p class="text-sm tracking-widest text-white/50 uppercase">Recomendó gift card</p>
+              </div>
+            </div>
+            <div class="flex gap-1 text-gold" aria-label="5 de 5 estrellas">
+              <svg viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                <path d="M10 1l2.6 5.7 6.2.7-4.7 4.1 1.4 6.1L10 14.7l-5.5 2.9 1.4-6.1L1.2 7.4l6.2-.7L10 1z" />
+              </svg>
+              <svg viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                <path d="M10 1l2.6 5.7 6.2.7-4.7 4.1 1.4 6.1L10 14.7l-5.5 2.9 1.4-6.1L1.2 7.4l6.2-.7L10 1z" />
+              </svg>
+              <svg viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                <path d="M10 1l2.6 5.7 6.2.7-4.7 4.1 1.4 6.1L10 14.7l-5.5 2.9 1.4-6.1L1.2 7.4l6.2-.7L10 1z" />
+              </svg>
+              <svg viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                <path d="M10 1l2.6 5.7 6.2.7-4.7 4.1 1.4 6.1L10 14.7l-5.5 2.9 1.4-6.1L1.2 7.4l6.2-.7L10 1z" />
+              </svg>
+              <svg viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                <path d="M10 1l2.6 5.7 6.2.7-4.7 4.1 1.4 6.1L10 14.7l-5.5 2.9 1.4-6.1L1.2 7.4l6.2-.7L10 1z" />
+              </svg>
+            </div>
+            <p class="flex-1 text-base leading-relaxed text-white/75 italic sm:text-lg">
+              "Compré una gift card para regalar y no pudieron estar más agradecidos. Servicio de primera desde el
+              minuto uno."
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contacto" class="w-full px-4 py-20 sm:px-8 lg:px-16">
+        <div class="text-center">
+          <p class="font-bebas text-lg tracking-[0.3em] text-gold uppercase">Contacto</p>
+          <h2 class="mt-2 font-display text-4xl font-bold sm:text-5xl">Vení a conocer nuestra barbería</h2>
+          <p class="mt-3 font-bebas text-2xl tracking-[0.3em] text-white/60 uppercase">te esperamos en el local</p>
+        </div>
+
+        <div class="mt-12 grid gap-8 lg:grid-cols-2">
+          <div
+            class="reveal relative aspect-square overflow-hidden border border-copper/40"
+            style="--reveal-delay: 0ms"
+          >
+            <iframe
+              src="https://www.google.com/maps?q=-38.0023,-57.5560&z=16&output=embed"
+              title="Darkmoon Barbería - Mar del Plata"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+              class="absolute inset-0 h-full w-full border-0 contrast-125 grayscale-[35%] sepia-[15%]"
+            ></iframe>
+            <div class="pointer-events-none absolute inset-0 z-10 bg-zinc-800/50"></div>
+          </div>
+
+          <div
+            class="reveal flex flex-col gap-9 border border-copper/40 bg-gradient-to-br from-[#1a0f05] to-black/60 p-10 lg:aspect-square lg:overflow-hidden lg:p-14"
+            style="--reveal-delay: 150ms"
+          >
+            <div>
+              <p class="font-bebas text-3xl tracking-[0.3em] text-copper uppercase">Dirección</p>
+              <p class="mt-2 font-bebas text-2xl leading-relaxed text-white/80">
+                San Martín 2547, Mar del Plata, Buenos Aires
+              </p>
+            </div>
+
+            <div>
+              <p class="font-bebas text-3xl tracking-[0.3em] text-copper uppercase">Horarios</p>
+              <p class="mt-2 font-bebas text-2xl leading-relaxed text-white/80">Lunes a viernes de 10:00 a 18:00hs</p>
+              <p class="font-bebas text-2xl leading-relaxed text-white/80">Sábados de 10:00 a 15:00hs</p>
+              <p class="font-bebas text-2xl leading-relaxed text-copper">Domingos cerrado</p>
+            </div>
+
+            <div>
+              <p class="font-bebas text-3xl tracking-[0.3em] text-copper uppercase">Teléfono</p>
+              <p class="mt-2 font-bebas text-2xl leading-relaxed text-white/80">+549 222 222 222</p>
+            </div>
+
+            <div>
+              <p class="font-bebas text-3xl tracking-[0.3em] text-copper uppercase">Redes</p>
+              <div class="mt-3 flex items-center gap-4">
+                <a href="#" aria-label="Instagram" class="social-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="h-7 w-7">
+                    <rect x="3" y="3" width="18" height="18" rx="5" />
+                    <circle cx="12" cy="12" r="4" />
+                    <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none" />
+                  </svg>
+                </a>
+                <a href="#" aria-label="Pinterest" class="social-btn">
+                  <svg viewBox="0 0 24 24" fill="currentColor" class="h-7 w-7">
+                    <path
+                      d="M12 2C6.5 2 2 6.5 2 12c0 4.2 2.6 7.8 6.3 9.3-.1-.8-.2-2.1 0-3 .2-.9 1.3-5.4 1.3-5.4s-.3-.7-.3-1.7c0-1.6.9-2.8 2.1-2.8 1 0 1.5.7 1.5 1.6 0 1-.6 2.5-1 3.9-.3 1.1.6 2.1 1.7 2.1 2 0 3.6-2.1 3.6-5.2 0-2.7-1.9-4.6-4.7-4.6-3.2 0-5.1 2.4-5.1 4.9 0 1 .4 2 .9 2.6.1.1.1.2.1.3l-.3 1.3c-.1.3-.2.4-.4.3-1.3-.6-2.1-2.5-2.1-4 0-3.3 2.4-6.3 6.9-6.3 3.6 0 6.4 2.6 6.4 6 0 3.6-2.2 6.4-5.4 6.4-1.1 0-2.1-.6-2.4-1.2l-.7 2.5c-.2.9-.9 2-1.3 2.7.9.3 1.9.4 2.9.4 5.5 0 10-4.5 10-10S17.5 2 12 2z"
+                    />
+                  </svg>
+                </a>
+                <a href="#" aria-label="Facebook" class="social-btn">
+                  <svg viewBox="0 0 24 24" fill="currentColor" class="h-7 w-7">
+                    <path
+                      d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
