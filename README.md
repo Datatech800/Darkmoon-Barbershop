@@ -2,6 +2,10 @@
 
 A fictional barbershop landing page, built with a responsive design and using Tailwind CSS v4.
 
+**Live Site** https://datatech800.github.io/Darkmoon-Barbershop/
+
+>**Nota** Darkmoon Barbershop es una marca ficticia creada solo con fines demostrativos
+
 ## Structure
 
 ```
